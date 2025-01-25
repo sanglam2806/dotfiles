@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.cmd("set clipboard=unnamed") -- yank to clipboard MacOS
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set tabstop=4")

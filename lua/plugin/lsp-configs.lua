@@ -65,7 +65,19 @@ return {
 
 			--Java
 			lspconfig.jdtls.setup({
-				capabilities = capabilities,
+				settings = {
+					java = {
+						configuration = {
+							runtimes = {
+								{
+									name = "JavaSE-17",
+									path = "/opt/jdk-17",
+									default = true,
+								},
+							},
+						},
+					},
+				},
 			})
 
 			--GoLang

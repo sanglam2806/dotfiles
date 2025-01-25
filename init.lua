@@ -12,4 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
+require("vim-helpers")
+require("help-toggle")
+require("terminal-toggle")
 require("lazy").setup("plugin")
