@@ -1,9 +1,9 @@
 return {
     {
         "williamboman/mason.nvim",
-        -- config = function()
-        -- 	require("mason").setup()
-        -- end,
+        config = function()
+        	require("mason").setup()
+        end,
     },
     {
         "williamboman/mason-lspconfig.nvim",
@@ -22,7 +22,7 @@ return {
 					"lua_ls",
 					"zls",
 					--"gopls",
-					"jdtls",
+					-- "jdtls",
 					"pyright",
 				}
 			})
@@ -38,8 +38,8 @@ return {
                             globals = { "vim" },
                         },
                         workspace = {
-                            library = vim.api.nvim_get_runtime_file("", true),
                             checkThirdParty = false,
+                            library = vim.api.nvim_get_runtime_file("", true),
                         },
                         telemetry = {
                             enable = false,
@@ -63,22 +63,22 @@ return {
 			vim.g.zig_fmt_parse_errors = 0
 			vim.g.zig_fmt_autosave = 0
 
-			--Java
-			lspconfig.jdtls.setup({
-				settings = {
-					java = {
-						configuration = {
-							runtimes = {
-								{
-									name = "JavaSE-23",
-									path = "/opt/jdk-23",
-									default = true,
-								},
-							},
-						},
-					},
-				},
-			})
+			-- --Java
+			-- lspconfig.jdtls.setup({
+			-- 	settings = {
+			-- 		java = {
+			-- 			configuration = {
+			-- 				runtimes = {
+			-- 					{
+			-- 						name = "JavaSE-23",
+			-- 						path = "/opt/jdk-23",
+			-- 						default = true,
+			-- 					},
+			-- 				},
+			-- 			},
+			-- 		},
+			-- 	},
+			-- })
 
 			--GoLang
 			lspconfig.gopls.setup({
