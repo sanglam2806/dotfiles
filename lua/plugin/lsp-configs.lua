@@ -27,10 +27,10 @@ return {
 				}
 			})
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
-            local lspconfig = require("lspconfig")
+            -- local lspconfig = require("lspconfig")
 
             -- lua
-            lspconfig.lua_ls.setup({
+            vim.lsp.config['lua_ls'] = {
                 capabilities = capabilities,
                 settings = {
                     Lua = {
@@ -46,20 +46,21 @@ return {
                         },
                     },
                 },
-            })
+            }
 
 			--zig
-			lspconfig.zls.setup({
+			vim.lsp.config['zls'] = {
 				capabilities = capabilities,
-				root_dir = lspconfig.util.root_pattern(".git", "build.zig", "zls.json"),
+				root_markers = {".git", {"build.zig", "zls.json"}},
 				settings = {
 					zls = {
-						enable_inlay_hints = true,
+						enable_inlay_hints = false,
 						enable_snippets = true,
 						warn_style = true,
 					},
 				}
-			})
+			}
+
 			vim.g.zig_fmt_parse_errors = 0
 			vim.g.zig_fmt_autosave = 0
 
@@ -81,14 +82,15 @@ return {
 			-- })
 
 			--GoLang
-			lspconfig.gopls.setup({
+			vim.lsp.config['gopls'] = {
 				capabilities = capabilities,
-			})
+			}
 
 			--python
-			lspconfig.pyright.setup({
+			vim.lsp.config['pyright']={
 				capabilities = capabilities,
-			})
+			}
+
         end,
     },
 }
