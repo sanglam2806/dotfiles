@@ -9,6 +9,18 @@ if not vim.uv.fs_stat(lazypath) then
         lazypath,
     })
 end
+-- vim.o.termguicolors = false
+vim.opt.background = "dark"
+--
+vim.opt.cursorline = true
+-- vim.api.nvim_set_hl(0, "Visual", {
+--   ctermbg = 187,
+-- })
+-- vim.api.nvim_set_hl(0, "CursorLine", {
+--
+--   ctermbg = 180, -- light yellow
+--
+-- })
 vim.opt.runtimepath:prepend(lazypath)
 
 require("vim-options")
