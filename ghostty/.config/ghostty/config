@@ -1,0 +1,80 @@
+theme = Kanagawabones
+
+font-feature = "liga"
+font-size = 15
+font-style="Heavy"
+font-variation-bold = wght=700
+background-opacity = 0.8
+
+background-blur-radius = 100
+background-image = "./img/background.jpg" 
+background-image-opacity = 0.1
+background-image-fit = cover
+macos-titlebar-proxy-icon = hidden
+
+macos-titlebar-style = hidden
+title = ""
+
+# cursor-color = #c48270
+cursor-opacity = 0.65 
+adjust-cursor-thickness = 5
+copy-on-select = clipboard
+
+window-colorspace = "display-p3"
+# fullscreen = true
+window-width = 189
+window-height = 53
+
+bell-features = title
+custom-shader = sampler2D iChannel0
+# --- Background & text ---
+
+#background = #f7f3d0
+#foreground = #202020
+
+cursor-color = #000000
+cursor-text = #f6f1c3
+
+selection-background = #bfa03a
+selection-foreground = #bfa03a
+
+# --- ANSI palette (tuned slightly) ---
+# black
+
+#palette = 0=#1c1c1c
+#palette = 8=#5f5f5f
+#
+## red (keywords)
+#
+#palette = 1=#d70000
+#palette = 9=#af0000
+#
+## green (strings)
+#
+#palette = 2=#5f8700
+#palette = 10=#3f5f00
+#
+## yellow (annotations)
+#
+#palette = 3=#af8700
+#palette = 11=#875f00
+#
+## blue (types / classes)
+#
+#palette = 4=#005faf
+#palette = 12=#004080
+#
+## magenta
+#
+#palette = 5=#875f87
+#palette = 13=#5f3f5f
+#
+## cyan (imports / package paths)
+#
+#palette = 6=#008787
+#palette = 14=#005f5f
+#
+## white
+#
+#palette = 7=#3a3a3a
+#palette = 15=#1c1c1c
