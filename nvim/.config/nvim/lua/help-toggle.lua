@@ -11,6 +11,6 @@ vim.api.nvim_create_autocmd("FileType", {
 			border = "rounded"
 		};
 		vim.cmd("wincmd c")
-			vim.api.nvim_open_win(currentBuff, true, config);
+		vim.api.nvim_open_win(currentBuff, true, config);
 	end,
 });

@@ -59,6 +59,7 @@ return {
 					{ name = "gci" },
 					{ name = "ts_ls" },
 					{ name = "gopls" },
+					{ name = "render-markdown" },
 				},
 				{
 					{name = "buffer"},
