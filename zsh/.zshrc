@@ -9,6 +9,7 @@ export PATH=/opt/homebrew/bin:$PATH
 export PATH=/Users/lamsang/Document/Dev/tool/flutter/bin:$PATH
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Zig version controll tool
 export PATH=/Users/lamsang/.zvm/bin:$PATH
 export PATH=/Users/lamsang/.zvm/self:$PATH
@@ -20,6 +21,10 @@ plugins=(git)
 
 # Alias for easier
 alias v=nvim
+alias ov='cd ~/dotfiles/'
+
+# tmux source file
+alias stm='tmux source-file ~/.tmux.conf \;'
 
 # open vim setting
 
@@ -37,6 +42,10 @@ alias ss='source ~/.zshrc'
 alias cps='cp ~/.zshrc ~/.config/nvim/.zshrc'
 alias oh='cd ~/ && echo "Went back home"'
 
+# setting Lgtm
+alias git='lgtm'
+alias gts='lgtm status'
+
 # setting fzf
 source <(fzf --zsh)
 alias f=fzf
@@ -46,3 +55,8 @@ alias fp='fzf --preview="bat --color=always {}"'
 alias fv='nvim ${fzf -m --preivew="bat --color=always {}"'
 
 alias ll='ls -ls'
+
+# jenv manages JAVA_HOME/PATH dynamically; switch with `jenv global <version>` or `jenv local <version>`
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
