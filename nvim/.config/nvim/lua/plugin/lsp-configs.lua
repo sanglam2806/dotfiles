@@ -21,13 +21,14 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"zls",
-					--"gopls",
-					-- "jdtls",
 					"pyright",
-				}
+				},
+				-- jdtls is started by nvim-jdtls (after/plugin/java.lua)
+				automatic_enable = {
+					exclude = { "jdtls" },
+				},
 			})
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
-            -- local lspconfig = require("lspconfig")
 
             -- lua
             vim.lsp.config['lua_ls'] = {
@@ -63,23 +64,6 @@ return {
 
 			vim.g.zig_fmt_parse_errors = 0
 			vim.g.zig_fmt_autosave = 0
-
-			-- --Java
-			-- lspconfig.jdtls.setup({
-			-- 	settings = {
-			-- 		java = {
-			-- 			configuration = {
-			-- 				runtimes = {
-			-- 					{
-			-- 						name = "JavaSE-23",
-			-- 						path = "/opt/jdk-23",
-			-- 						default = true,
-			-- 					},
-			-- 				},
-			-- 			},
-			-- 		},
-			-- 	},
-			-- })
 
 			--GoLang
 			vim.lsp.config['gopls'] = {
