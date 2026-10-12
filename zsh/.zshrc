@@ -60,3 +60,12 @@ alias ll='ls -ls'
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+
+# bun completions
+[ -s "/Users/lamsang/.bun/_bun" ] && source "/Users/lamsang/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.local/bin/env"
